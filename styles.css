@@ -8,3 +8,7 @@ body,
 #map {
     height: 100%;
 }
+
+.maplibregl-popup-content {
+    border-radius: 10px;
+  }
