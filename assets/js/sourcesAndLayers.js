@@ -62,7 +62,7 @@ function addSources(map) {
       id: 'zonesinondables-layer',
       type: 'fill',
       source: 'zonesinondables-source',
-      'source-layer': 'zi',
+      'source-layer': 'zonesinondables',
       paint: {
         "fill-color": "#1D31B8",
         "fill-opacity": 0.2,
