@@ -356,7 +356,7 @@ map.on("click", function (e) {
     let popupMessage = `${message}<br>Parcelle : ${parcelleId}`;
 
     if (eligible) {
-      popupMessage += `<br><a href="https://www.strasbourg.eu/404" target="_blank">M'inscrire pour un diagnostic ALABRI gratuit</a>`;
+      popupMessage += `<br><a href="https://demarches-strasbourg.test.entrouvert.org/a-faire-valider/diagnostic-inondation-test/" target="_blank">M'inscrire pour un diagnostic ALABRI gratuit</a>`;
     }
     popupMessage +=
       '<br><a href="https://www.strasbourg.eu/risque-inondation" target="_blank">Plus d\'informations sur le risque inondation</a>';
