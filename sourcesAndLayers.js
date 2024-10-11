@@ -16,13 +16,13 @@ function addSources(map) {
   
     map.addSource("zonesinondables-source", {
       type: "vector",
-      url: "pmtiles://https://ville-eurometropole-strasbourg.github.io/carte-eligibilite-alabri/assets/zonesinondables.pmtiles",
+      url: "pmtiles://assets/zonesinondables.pmtiles",
       attribution: 'Ville et Eurométropole de Strasbourg'
     });
   
     map.addSource("couleeseauxboueuses-source", {
       type: "vector",
-      url: "pmtiles://https://ville-eurometropole-strasbourg.github.io/carte-eligibilite-alabri/assets/coulees_eaux_boueuses.pmtiles",
+      url: "pmtiles://assets/coulees_eaux_boueuses.pmtiles",
       attribution: 'Ville et Eurométropole de Strasbourg'
     });
   }
