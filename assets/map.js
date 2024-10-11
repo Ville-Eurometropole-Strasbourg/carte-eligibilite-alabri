@@ -193,7 +193,7 @@ const map = new maplibregl.Map({
     ]
 },
   minZoom: 10,
-  maxZoom: 17,
+  maxZoom: 16,
   center: [7.7254, 48.5798],
   hash: true,
   maxBounds: bounds,
