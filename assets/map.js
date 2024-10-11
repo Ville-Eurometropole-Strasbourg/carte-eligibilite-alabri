@@ -310,7 +310,7 @@ map.on("click", function (e) {
       let popupMessage = `${message}<br>Parcelle : ${parcelleId}`;
 
       if (eligible) {
-        popupMessage += `<br>Zone gérée par le SDEA<br><a href="https://www.strasbourg.eu/risque-inondation" target="_blank">Plus d'informations sur l'opération Pieds au sec</a>`;
+        popupMessage += `<br>Zone gérée par le SDEA<br><a href="https://www.sdea.fr/index.php/fr/les-services/conseil/j-agis-en-cas-d-inondation/je-fais-diagnostiquer-la-vulnerabilite-de-mon-habitation" target="_blank">Plus d'informations sur l'opération Pieds au sec</a>`;
       }
 
       new maplibregl.Popup()
