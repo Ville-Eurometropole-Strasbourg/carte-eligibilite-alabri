@@ -131,3 +131,34 @@ function verificationDebordementBruche(parcelle, polygon) {
       return null;
     });
 }
+
+function verificationPacDebordementEhnAndlauScheer(parcelle, polygon) {
+  const url = `https://data.strasbourg.eu/api/records/1.0/search/?dataset=ppri_eas_inond_debt&q=&geofilter.polygon=${polygon}`;
+  return fetch(url)
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      // Ne pas filtrer par nom de zone
+      const allRecords = data.records;
+      // Fusionner les géométries de toutes les zones
+      const mergedGeometry = allRecords.reduce((acc, r) => {
+        if (!acc) return r.fields.geo_shape;
+        return turf.union(acc, r.fields.geo_shape);
+      }, null);
+      if (!mergedGeometry) {
+        return false;
+      }
+      // Intersecter la géométrie fusionnée avec la parcelle
+      const intersection = turf.intersect(mergedGeometry, parcelle);
+      const contactAlea = turf.booleanIntersects(
+        { type: 'FeatureCollection', features: intersection ? [intersection] : [] },
+        parcelle
+      );
+      return contactAlea;
+    })
+    .catch(error => {
+      console.error('Erreur traitement des géométries EMS :', error);
+      return null;
+    });
+}

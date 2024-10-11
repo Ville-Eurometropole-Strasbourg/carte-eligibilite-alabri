@@ -118,6 +118,12 @@ map.on("click", function (e) {
     ).then((result) => {
       console.log("exposition au risque de debordement (Bruche)", result);
     });
+    verificationPacDebordementEhnAndlauScheer(
+      cadastreData.geo_shape,
+      geomToOdsPolygon(cadastreData.geo_shape)
+    ).then((result) => {
+      console.log("exposition au risque de debordement (Ehn Andlau Scheer)", result);
+    });
 
     function afficherPopupMapLibre(message, coordinates) {
       new maplibregl.Popup().setLngLat(coordinates).setHTML(message).addTo(map);
@@ -140,6 +146,10 @@ map.on("click", function (e) {
         cadastreData.geo_shape,
         geomToOdsPolygon(cadastreData.geo_shape)
       ),
+      verificationPacDebordementEhnAndlauScheer(
+        cadastreData.geo_shape,
+        geomToOdsPolygon(cadastreData.geo_shape)
+      )
     ];
 
     Promise.all(promessesDeVerification)
