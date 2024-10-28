@@ -160,17 +160,18 @@ map.on("click", function (e) {
         if (featuresPapiZorn.length > 0) {
           // Messages pour la zone Papi Zorn
           message += risqueExpose
-            ? "<b>Votre bien est situé en zone inondable</b><br/>"
-            : "<b>Votre bien n'est pas situé en zone inondable</b><br/>";
+            ? "<b>Votre bien est identifié en zone inondable</b><br/>"
+            : "<b>Votre bien n'est pas identifié en zone inondable</b><br/>";
           message += `Parcelle : ${parcelleId}<br/>Zone gérée par le SDEA<br><a href="https://www.sdea.fr/index.php/fr/les-services/conseil/j-agis-en-cas-d-inondation/je-fais-diagnostiquer-la-vulnerabilite-de-mon-habitation" target="_blank">Plus d'informations sur l'opération Pieds au sec</a>`;
         } else {
           // Messages et liens pour les zones hors Papi Zorn
           message += risqueExpose
-            ? "<b>Votre bien est situé en zone inondable</b><br/>" +
+            ? "<b>Votre bien est identifié en zone inondable</b><br/>" +
               `Parcelle : ${parcelleId}<br/>` +
               `<a href='https://demarches.strasbourg.eu/a-faire-valider/diagnostic-inondation/?parc=${parcelleId}' target='_blank'>M'inscrire pour un diagnostic ALABRI gratuit</a><br/>` +
-              "<a href='https://www.strasbourg.eu/risque-inondation' target='_blank'>Plus d'informations sur le risque inondation</a>"
-            : "<b>Votre bien n'est pas situé en zone inondable</b><br/>" +
+              "<a href='https://www.strasbourg.eu/risque-inondation' target='_blank'>Plus d'informations sur le risque inondation</a><br/>" +
+              "mon habitation a été inondée : <a href='https://www.strasbourg.eu/contact-service-gestion-prevention-risques-environnementaux' target='_blank'>être recontacté</a>"
+            : "<b>Votre bien n'est pas identifié en zone inondable</b><br/>" +
               `Parcelle : ${parcelleId}<br/>` +
               "<a href='https://www.strasbourg.eu/risque-inondation' target='_blank'>Plus d'informations sur le risque inondation</a><br/>" +
               "<a href='https://www.strasbourg.eu/prevenir-inondations-caves-sous-sols' target='_blank'>Prévenir les inondations en sous-sols</a>";
