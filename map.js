@@ -169,12 +169,12 @@ map.on("click", function (e) {
             ? "<b>Votre bien est identifié en zone inondable</b><br/>" +
               `Parcelle : ${parcelleId}<br/>` +
               `<a href='https://demarches.strasbourg.eu/a-faire-valider/diagnostic-inondation/?parc=${parcelleId}' target='_blank'>M'inscrire pour un diagnostic ALABRI gratuit</a><br/>` +
-              "<a href='https://www.strasbourg.eu/risque-inondation' target='_blank'>Plus d'informations sur le risque inondation</a><br/>" +
-              "mon habitation a été inondée : <a href='https://www.strasbourg.eu/contact-service-gestion-prevention-risques-environnementaux' target='_blank'>être recontacté</a>"
+              "<a href='https://www.strasbourg.eu/risque-inondation' target='_blank'>Plus d'informations sur le risque inondation</a>"
             : "<b>Votre bien n'est pas identifié en zone inondable</b><br/>" +
               `Parcelle : ${parcelleId}<br/>` +
               "<a href='https://www.strasbourg.eu/risque-inondation' target='_blank'>Plus d'informations sur le risque inondation</a><br/>" +
-              "<a href='https://www.strasbourg.eu/prevenir-inondations-caves-sous-sols' target='_blank'>Prévenir les inondations en sous-sols</a>";
+              "<a href='https://www.strasbourg.eu/prevenir-inondations-caves-sous-sols' target='_blank'>Prévenir les inondations en sous-sols</a><br/>" +
+              "mon habitation a été inondée : <a href='https://www.strasbourg.eu/contact-service-gestion-prevention-risques-environnementaux' target='_blank'>être recontacté</a>";
         }
 
         afficherPopupMapLibre(message, coordinates);
