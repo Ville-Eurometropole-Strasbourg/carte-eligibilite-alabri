@@ -168,7 +168,7 @@ map.on("click", function (e) {
           message += risqueExpose
             ? "<b>Votre bien est identifié en zone inondable</b><br/>" +
               `Parcelle : ${parcelleId}<br/>` +
-              `<a href='https://demarches.strasbourg.eu/a-faire-valider/diagnostic-inondation/?parc=${parcelleId}' target='_blank'>M'inscrire pour un diagnostic ALABRI gratuit</a><br/>` +
+              `<a href='https://demarches.strasbourg.eu/environnement/diagnostic-inondation/?parc=${parcelleId}' target='_blank'>M'inscrire pour un diagnostic ALABRI gratuit</a><br/>` +
               "<a href='https://www.strasbourg.eu/risque-inondation' target='_blank'>Plus d'informations sur le risque inondation</a>"
             : "<b>Votre bien n'est pas identifié en zone inondable</b><br/>" +
               `Parcelle : ${parcelleId}<br/>` +
