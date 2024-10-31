@@ -94,7 +94,7 @@ map.on("click", function (e) {
     const cadastreData = results[0];
     const parcelleId = cadastreData.id_parcellaire;
 
-    verificationRemonteeDeNappeEms(
+/*     verificationRemonteeDeNappeEms(
       cadastreData.geo_shape,
       geomToOdsPolygon(cadastreData.geo_shape)
     ).then((result) => {
@@ -123,7 +123,7 @@ map.on("click", function (e) {
       geomToOdsPolygon(cadastreData.geo_shape)
     ).then((result) => {
       console.log("exposition au risque de debordement (Ehn Andlau Scheer)", result);
-    });
+    }); */
 
     function afficherPopupMapLibre(message, coordinates) {
       new maplibregl.Popup().setLngLat(coordinates).setHTML(message).addTo(map);
