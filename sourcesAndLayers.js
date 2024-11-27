@@ -6,23 +6,23 @@ function addSources(map) {
   
     map.addSource("masque-source", {
       type: "geojson",
-      data: "assets/masque.geojson",
+      data: "https://sig.strasbourg.eu/datastrasbourg/alabri/masque.geojson",
     });
   
     map.addSource("papizorn-source", {
       type: "geojson",
-      data: "assets/papi_zorn.geojson",
+      data: "https://sig.strasbourg.eu/datastrasbourg/alabri/papi_zorn.geojson",
     });
   
     map.addSource("zonesinondables-source", {
       type: "vector",
-      url: "pmtiles://assets/zonesinondables.pmtiles",
+      url: "pmtiles://https://sig.strasbourg.eu/datastrasbourg/alabri/zonesinondables.pmtiles",
       attribution: 'Ville et Eurométropole de Strasbourg'
     });
   
     map.addSource("couleeseauxboueuses-source", {
       type: "vector",
-      url: "pmtiles://assets/coulees_eaux_boueuses.pmtiles",
+      url: "pmtiles://https://sig.strasbourg.eu/datastrasbourg/alabri/coulees_eaux_boueuses.pmtiles",
       attribution: 'Ville et Eurométropole de Strasbourg'
     });
   }
