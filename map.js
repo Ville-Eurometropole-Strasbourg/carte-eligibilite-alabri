@@ -94,37 +94,6 @@ map.on("click", function (e) {
     const cadastreData = results[0];
     const parcelleId = cadastreData.id_parcellaire;
 
-/*     verificationRemonteeDeNappeEms(
-      cadastreData.geo_shape,
-      geomToOdsPolygon(cadastreData.geo_shape)
-    ).then((result) => {
-      console.log("exposition au risque de remontee de nappe (EMS)", result);
-    });
-    verificationCouleesEauxBoueuses(
-      cadastreData.geo_shape,
-      geomToOdsPolygon(cadastreData.geo_shape)
-    ).then((result) => {
-      console.log("exposition au risque de coulees eaux boueuses", result);
-    });
-    verificationDebordementEms(
-      cadastreData.geo_shape,
-      geomToOdsPolygon(cadastreData.geo_shape)
-    ).then((result) => {
-      console.log("exposition au risque de debordement (EMS)", result);
-    });
-    verificationDebordementBruche(
-      cadastreData.geo_shape,
-      geomToOdsPolygon(cadastreData.geo_shape)
-    ).then((result) => {
-      console.log("exposition au risque de debordement (Bruche)", result);
-    });
-    verificationPacDebordementEhnAndlauScheer(
-      cadastreData.geo_shape,
-      geomToOdsPolygon(cadastreData.geo_shape)
-    ).then((result) => {
-      console.log("exposition au risque de debordement (Ehn Andlau Scheer)", result);
-    }); */
-
     function afficherPopupMapLibre(message, coordinates) {
       new maplibregl.Popup().setLngLat(coordinates).setHTML(message).addTo(map);
     }
